@@ -9,7 +9,7 @@ function App() {
   
   return (
     <div className='App flex flex-col min-h-screen'>
-      <div className='container mx-auto max-w-screen-xl py-4 flex-grow'>
+      <div className='w-full mx-auto  py-4 flex-grow'>
         <Navbar/>
          <Routes>
             <Route path="/" element={<Home />} />
