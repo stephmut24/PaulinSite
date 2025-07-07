@@ -95,7 +95,7 @@ function Home() {
 
             {/* Image à droite (et en dessous sur mobile) */}
             <div className="flex justify-center mt-8 lg:mt-20">
-              <CircularImg />
+              <CircularImg src="src/assets/img/img2.png" />
             </div>
           </div>
         </div>
@@ -125,19 +125,26 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className = "py-20 bg-gray-100">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Nos <span className="text-red-600">Services</span>
+             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Mission <span className="text-red-600">et</span> Vesions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une gamme complète de services pour tous vos besoins en
-              construction et rénovation
-            </p>
           </div>
-          </div>
+        </div>
+        <div>
 
+        </div>
+      </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Mission <span className="text-red-600">et</span> Vesions
+            </h2>
+          </div>
+        </div>
 
       </section>
     </>

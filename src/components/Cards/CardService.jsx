@@ -25,7 +25,7 @@ export default function CardService({
   link,
 }) {
   return (
-    <Card className="w-full sm:w-[22rem] mx-auto border border-gray-200 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+    <Card className="w-full sm:w-[22rem] mx-auto border border-gray-200 rounded-xl p-6  hover:shadow-red-500 transition-all duration-300 transform hover:-translate-y-2 group">
       <CardBody className="p-0">
         <div className="flex items-center justify-center w-16 h-16 bg-red-100 rounded-xl mb-6 group-hover:bg-red-600 transition-colors duration-300">
           <div className="text-black group-hover:text-white text-2xl">
