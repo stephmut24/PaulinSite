@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import CircularImg from "../components/CircularImg";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import CardService from "../components/Cards/CardService";
+import { cardsData } from "../components/Cards/cardsData";
 import { Button } from "@material-tailwind/react";
 
 function Home() {
@@ -98,16 +100,45 @@ function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="px-4 lg:px-20 max-w-screen-xl mx-auto py-5">
-          <h2 className="text-5xl text-red-600 font-bold text-center mb-4">
-            Nos Services
-          </h2>
-          <p className="text-gray-700 text-lg text-center mb-12">
-            Découvrez comment nous pouvons vous aider à atteindre vos objectifs.
-          </p>
-          {/* Ajoutez ici les services ou autres contenus */}
+      <section id="services" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Nos <span className="text-red-600">Services</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Une gamme complète de services pour tous vos besoins en
+              construction et rénovation
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsData.map((card) => (
+              <CardService
+                key={card.id}
+                title={card.title}
+                description={card.description}
+                features={card.features}
+                icon={card.icon}
+                link={card.link}
+              />
+            ))}
+          </div>
         </div>
+      </section>
+      <section className = "py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Nos <span className="text-red-600">Services</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Une gamme complète de services pour tous vos besoins en
+              construction et rénovation
+            </p>
+          </div>
+          </div>
+
+
       </section>
     </>
   );
