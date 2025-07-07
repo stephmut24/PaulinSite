@@ -1,4 +1,5 @@
-import React from "react";
+import React, {  useEffect } from "react";
+
 import {
   Navbar,
   MobileNav,
@@ -10,22 +11,26 @@ import {
 export default function CustomNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+  
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0  lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center rounded-full px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600">
+        <a
+          href="#"
+          className="flex items-center rounded-full text-black px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600"
+        >
           A Propos
         </a>
       </Typography>
@@ -35,7 +40,10 @@ export default function CustomNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center rounded-full px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600">
+        <a
+          href="#"
+          className="flex items-center rounded-full text-black px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600"
+        >
           Nos Services
         </a>
       </Typography>
@@ -45,15 +53,35 @@ export default function CustomNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center rounded-full px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600">
+        <a
+          href="#"
+          className="flex items-center rounded-full text-black px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600"
+        >
+          Nos Réalisations
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a
+          href="#"
+          className="flex items-center rounded-full text-black px-2 py-1 transition-transform hover:scale-105 border border-transparent hover:border-red-600 hover:text-red-600"
+        >
           Nous contacter
         </a>
       </Typography>
     </ul>
   );
-
+  
+    
   return (
-    <Navbar className="fixed top-0 left-0 right-0 z-50 w-full rounded-none px-4 py-4 bg-white text-black shadow-md">
+    
+    <Navbar
+  className={"fixed top-0 left-0 right-0 z-50 w-full rounded-none px-4 py-4 bg-white text-black shadow-md"}
+>
       <div className="flex items-center justify-between text-blue-gray-900 color">
         <Typography
           as="a"
@@ -65,18 +93,13 @@ export default function CustomNavbar() {
             alt="LuxTechService Logo"
             className="h-12 w-12 mr-2"
           />
-          
-          <span className="font-bold text-2xl text-red-600 ">
-            LuxTech
-          </span>
-          <span className="text-black font-black text-2xl">
-            Services
-          </span>
+
+          <span className="font-bold text-2xl text-red-600 ">LuxTech</span>
+          <span className="text-black font-black text-2xl">Services</span>
         </Typography>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
           <div className="hidden lg:flex items-center gap-x-1">
-            
             <Button
               variant="outlined"
               size="sm"
@@ -124,6 +147,8 @@ export default function CustomNavbar() {
           </IconButton>
         </div>
       </div>
+    
+      
       <MobileNav open={openNav}>
         {navList}
         <div className="rounded-full border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition"
@@ -134,6 +159,8 @@ export default function CustomNavbar() {
          
         </div>
       </MobileNav>
-    </Navbar>
+      </Navbar>
+      
+    
   );
 }

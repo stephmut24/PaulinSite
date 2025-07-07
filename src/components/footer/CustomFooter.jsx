@@ -50,10 +50,10 @@ export default function FooterWithSitemap() {
             </div>
           ))}
         </div>
-        <div className="flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+        <div className="flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row ">
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+            className="mb-4 font-normal  text-blue-gray-900 md:mb-0"
           >
             &copy; {currentYear} <a href="stephanemugisho24@gmail.com">StephDev</a>. Tous
             Droits réservés.

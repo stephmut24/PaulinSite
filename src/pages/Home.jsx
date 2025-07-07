@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import CircularImg from "../components/CircularImg";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, WrenchIcon,
+  LightBulbIcon,
+  MapPinIcon,
+  ShieldCheckIcon,
+  HandThumbUpIcon } from "@heroicons/react/24/solid";
 import CardService from "../components/Cards/CardService";
 import { cardsData } from "../components/Cards/cardsData";
 import { Button } from "@material-tailwind/react";
@@ -126,27 +130,86 @@ function Home() {
         </div>
       </section>
       <section className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Mission <span className="text-red-600">et</span> Vesions
-            </h2>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-8">
+            {/* Texte à droite (sur desktop) */}
+            <div>
+              <div className="max-w-lg text-center lg:text-left">
+                <h2 className="text-xl md:text-4xl font-bold text-red-600 mb-4">
+                  Mission
+                </h2>
+                <p className="text-gray-700 text-lg">
+                  Luxtech s’engage à proposer des solutions électriques et
+                  d’éclairage innovantes, fiables et économes, avec une qualité
+                  de service irréprochable, afin d’éclairer les projets
+                  résidentiels, commerciaux et industriels de manière durable.
+                </p>
+              </div>
+              <div className="max-w-lg text-center lg:text-left">
+                <h2 className="text-xl md:text-4xl font-bold text-back mb-4">
+                  Visions
+                </h2>
+                <p className="text-gray-700 text-lg">
+                  Être un acteur de référence dans le secteur électrique,
+                  reconnu pour la durabilité de ses installations, l’innovation
+                  technologique et l’impact positif sur la qualité de vie des
+                  communautés.
+                </p>
+              </div>
+            </div>
+
+            {/* Image à gauche */}
+            <div className="flex justify-center">
+              <CircularImg
+                src="src/assets/img/img3.png"
+                alt="LuxTech Service"
+              />
+            </div>
           </div>
         </div>
-        <div>
-
-        </div>
       </section>
+
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Mission <span className="text-red-600">et</span> Vesions
-            </h2>
-          </div>
-        </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        Pourquoi nous choisir ?
+      </h2>
+    </div>
 
-      </section>
+    {/* Liste en grille avec Heroicons */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 text-lg text-gray-700">
+      <div className="flex items-start gap-4">
+        <WrenchIcon className="h-6 w-6 text-red-600 mt-1" />
+        <p>Expertise complète, de la conception au suivi et maintenance</p>
+      </div>
+
+      <div className="flex items-start gap-4">
+        <LightBulbIcon className="h-6 w-6 text-red-600 mt-1" />
+        <p>Produits variés & modulables, supportant une gamme complète de luminaires</p>
+      </div>
+
+      <div className="flex items-start gap-4">
+        <MapPinIcon className="h-6 w-6 text-red-600 mt-1" />
+        <p>Présence locale à Goma/Bukavu — parfaite réactivité et connaissance du terrain</p>
+      </div>
+
+      <div className="flex items-start gap-4">
+        <ShieldCheckIcon className="h-6 w-6 text-red-600 mt-1" />
+        <p>Engagement qualité & sécurité, conforme aux normes</p>
+      </div>
+
+      <div className="flex items-start gap-4">
+        <HandThumbUpIcon className="h-6 w-6 text-red-600 mt-1" />
+        <p>Service post-installation : contrats de maintenance et interventions sur demande</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
     </>
   );
 }
