@@ -89,7 +89,7 @@ export default function CustomNavbar() {
           className="mr-4 cursor-pointer py-1.5 flex items-center transition-transform hover:scale-105 "
         >
           <img
-            src="src/assets/img/logo.png"
+            src="/img/logo.png"
             alt="LuxTechService Logo"
             className="h-12 w-12 mr-2"
           />

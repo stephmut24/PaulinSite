@@ -99,7 +99,7 @@ function Home() {
 
             {/* Image à droite (et en dessous sur mobile) */}
             <div className="flex justify-center mt-8 lg:mt-20">
-              <CircularImg src="src/assets/img/img2.png" />
+              <CircularImg src="/img/img2.png" alt="Mon image"/>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ function Home() {
             {/* Image à gauche */}
             <div className="flex justify-center">
               <CircularImg
-                src="src/assets/img/img3.png"
+                src="/img/img2.png"
                 alt="LuxTech Service"
               />
             </div>
